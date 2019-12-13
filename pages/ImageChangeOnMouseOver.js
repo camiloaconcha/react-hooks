@@ -1,15 +1,18 @@
 import React from 'react';
+import ImageToggleOnMouseOver from '../src/ImageToggleOnMouseOver';
 
 const ImageChangeOnMouseOver = () => {
-    const mystyle = {
-        maxWidth: '300px',
-        maxHeight: '300px',
-    };
     return (
         <div>
-            <img style={mystyle} src="/dogs/dog1.jpg" alt="" />
-            &nbsp;&nbsp;&nbsp;
-            <img style={mystyle} src="/dogs/dog2.jpg" alt="" />
+            <ImageToggleOnMouseOver
+                primaryImg="/dogs/bw/dog1.jpg"
+                secondaryImg="/dogs/colored/dog1.jpg"
+            />
+            <br />
+            <ImageToggleOnMouseOver
+                secondaryImg="/dogs/colored/dog2.jpg"
+                primaryImg="/dogs/bw/dog2.jpg"
+            />
         </div>
     );
 };
